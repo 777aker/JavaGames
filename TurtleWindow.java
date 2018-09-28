@@ -49,11 +49,11 @@ public class TurtleWindow extends JFrame {
 		purples[11] = new Color(139, 0, 139);
 		purples[12] = new Color(128, 0, 128);
 		purples[13] = new Color(75, 0, 130);
-		one();
+		//one();
 		//two(); //broke it gotta fix it
-		//three(); //broke it gotta fix
-		//four();  //broke it gotta fix
-		five();
+		three(); //broke it gotta fix
+		//four();  
+		//five();
 		//tree();
 		//skeleton();
 		
@@ -177,7 +177,7 @@ public class TurtleWindow extends JFrame {
 			turtle.tColor(Color.CYAN);
 			number++;
 			turts.add(turtle);
-			tts.add(tt);
+			tt.start();
 		}
 		for(int i = 0; i < 1000; i++) {
 			for(Turtle t: turts) {
@@ -189,9 +189,6 @@ public class TurtleWindow extends JFrame {
 				t.right(150);
 				t.forward(i);
 			}
-		}
-		for(Thread tt: tts) {
-			tt.start();
 		}
 	}
 	
@@ -384,8 +381,9 @@ public class TurtleWindow extends JFrame {
 		t5.draw(g);
 		t6.draw(g);
 		if(!turts.isEmpty()) {
-			for(Turtle t: turts) {
-				t.draw(g);
+			int size = turts.size();
+			for(int i = 0; i < size; i++) {
+				turts.get(i).draw(g);
 			}
 		}
 		repaint();
