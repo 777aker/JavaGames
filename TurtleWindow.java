@@ -49,11 +49,13 @@ public class TurtleWindow extends JFrame {
 		purples[11] = new Color(139, 0, 139);
 		purples[12] = new Color(128, 0, 128);
 		purples[13] = new Color(75, 0, 130);
+		//pick one to run, just uncomment it
 		//one();
-		//two(); //broke it gotta fix it
-		three(); //broke it gotta fix
+		//two();
+		//three(); 
 		//four();  
 		//five();
+		//not tested or working yet 
 		//tree();
 		//skeleton();
 		
