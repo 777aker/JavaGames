@@ -49,13 +49,12 @@ public class TurtleWindow extends JFrame {
 		purples[11] = new Color(139, 0, 139);
 		purples[12] = new Color(128, 0, 128);
 		purples[13] = new Color(75, 0, 130);
-		//pick one to run, just uncomment it
-		//one();
-		//two();
-		//three(); 
-		//four();  
-		//five();
-		//not tested or working yet 
+		//pick one to run
+		one();
+		two(); 
+		three(); 
+		four();  
+		five();
 		//tree();
 		//skeleton();
 		
@@ -78,15 +77,12 @@ public class TurtleWindow extends JFrame {
 			}
 			number++;
 			turts.add(turtle);
-			tts.add(tt);
+			tt.start();
 		}
 		for(int i = 0; i < 1000; i++) {
 			for(Turtle t: turts) {
 				
 			}
-		}
-		for(Thread tt: tts) {
-			tt.start();
 		}
 	}
 	
@@ -208,7 +204,7 @@ public class TurtleWindow extends JFrame {
 				posy += 500;
 			}
 			turts.add(turtle);
-			tts.add(tt);
+			tt.start();
 		}
 		for(int i = 1; i < 1000; i++) {
 			for(Turtle t: turts) {
@@ -226,9 +222,6 @@ public class TurtleWindow extends JFrame {
 				}
 			}
 		}
-		for(Thread tt: tts) {
-			tt.start();
-		}
 	}
 	
 	public static void two() {
@@ -238,7 +231,7 @@ public class TurtleWindow extends JFrame {
 			turtle.tColor(Color.MAGENTA);
 			Thread tt = new Thread(turtle);
 			turts.add(turtle);
-			tts.add(tt);
+			tt.start();
 		}
 		for(int i = 0; i < 1000; i++) {
 			int it = 0;
@@ -253,9 +246,6 @@ public class TurtleWindow extends JFrame {
 				t.speed(it);
 				it++;
 			}
-		}
-		for(Thread tt: tts) {
-			tt.start();
 		}
 	}
 	
