@@ -1,2 +1,2 @@
 # JavaGames
-Games I have programmed in java
+This is a template for the first version of turtle Graphics.
